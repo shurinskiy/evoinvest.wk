@@ -1,0 +1,67 @@
+@import "lib/additional.scss"; 
+@include reset(); 
+
+// Include breakpoints badge
+body { @include screen-media(); }
+
+// Import media-query helper
+@import "../../node_modules/include-media/dist/_include-media.scss";
+
+$breakpoints: (
+	'xxxs': 360px,
+	'xxs': 480px,
+	'xs': 640px,
+	'sm': 780px,
+	'md': 960px,
+	'lg': 1100px,
+	'xlg': 1280px,
+	'xxlg': 1440px,
+	'xxxlg': 1680px,
+	'xxxxlg': 1920px
+);
+
+// Import animate-scss
+// @import
+	// "../../node_modules/animate-scss/_properties.scss",
+	// "../../node_modules/animate-scss/_attention-seekers/attention-seekers.scss",
+	// "../../node_modules/animate-scss/_bouncing-entrances/bouncing-entrances.scss",
+	// "../../node_modules/animate-scss/_bouncing-exits/bouncing-exits.scss",
+	// "../../node_modules/animate-scss/_fading-entrances/fading-entrances.scss",
+	// "../../node_modules/animate-scss/_fading-exits/fading-exits.scss",
+	// "../../node_modules/animate-scss/_flippers/flippers.scss",
+	// "../../node_modules/animate-scss/_lightspeed/lightspeed.scss",
+	// "../../node_modules/animate-scss/_rotating-entrances/rotating-entrances.scss",
+	// "../../node_modules/animate-scss/_rotating-exits/rotating-exits.scss",
+	// "../../node_modules/animate-scss/_sliding-entrances/sliding-entrances.scss",
+	// "../../node_modules/animate-scss/_sliding-exits/sliding-exits.scss",
+	// "../../node_modules/animate-scss/_specials/specials.scss",
+	// "../../node_modules/animate-scss/_zooming-exits/zooming-exits.scss",
+	// "../../node_modules/animate-scss/_zooming-entrances/zooming-entrances.scss";
+
+
+// @include font-face("Roboto-Black", "RBBL");
+// @import "../../node_modules/swiper/swiper";
+
+// Import BEM blocks scss
+@import "../blocks/**/*.scss";
+
+body, html {
+	box-sizing: border-box;
+	font-size: #{$basesize}px;
+	line-height: 1.2;
+	font-family: sans-serif;
+	background-color: #fafafa;
+	min-height: 100vh;
+	display: flex;
+	flex-flow: column nowrap;
+}
+// .main { flex: 1 0 auto; }
+.footer { 
+	flex: 0 0 auto; 
+	margin-top: auto; 
+}
+
+
+p { margin-bottom: 10px; }
+strong { font-weight: bold; }
+em { font-style: italic; }

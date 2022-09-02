@@ -1,0 +1,72 @@
+{
+	"name": "gulp-scss-starter",
+	"version": "1.0.3",
+	"scripts": {
+		"postinstall": "",
+		"bem": "bemtree-from-html",
+		"start": "gulp watch --dev --sync",
+		"remote": "gulp watch --remote",
+		"build": "gulp build",
+		"deploy-all": "gulp deploy --all",
+		"deploy": "gulp deploy"
+	},
+	"keywords": [
+		"bem",
+		"html",
+		"scss",
+		"gulp"
+	],
+	"author": "Alexandr Tumanov <shurinskiy2@gmail.com>",
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/shurinskiy/gulp_scss_starter"
+	},
+	"license": "ISC",
+	"devDependencies": {
+		"@babel/core": "^7.16.7",
+		"@babel/preset-env": "^7.16.7",
+		"babel-loader": "^8.2.3",
+		"bemtree-from-html": "^1.0.9",
+		"browser-sync": "^2.27.7",
+		"del": "^6.0.0",
+		"fancy-log": "^1.3.3",
+		"gulp": "^4.0.2",
+		"gulp-autoprefixer": "^8.0.0",
+		"gulp-clean-css": "^4.3.0",
+		"gulp-file-include": "^2.3.0",
+		"gulp-fonter": "^0.3.0",
+		"gulp-group-css-media-queries": "^1.2.2",
+		"gulp-if": "^3.0.0",
+		"gulp-load-plugins": "^2.0.7",
+		"gulp-newer": "^1.4.0",
+		"gulp-rsync": "0.0.9",
+		"gulp-sass": "^5.1.0",
+		"gulp-sass-glob": "^1.1.0",
+		"gulp-sourcemaps": "^3.0.0",
+		"gulp-svg-symbol-view": "^1.0.1",
+		"gulp-ttf2woff2": "^4.0.1",
+		"include-media": "^1.4.10",
+		"sass": "^1.45.2",
+		"vinyl-ftp": "^0.6.1",
+		"webpack-stream": "^6.1.2"
+	},
+	"dependencies": {
+		"animate-scss": "^3.2.1",
+		"jquery": "^3.6.0"
+	},
+	"externalJs": {
+		"jquery": "dist/jquery.min.js"
+	},
+	"ftp": {
+		"host": "",
+		"user": "",
+		"password": "",
+		"workdir": ""
+	},
+	"bemtree": {
+		"from": "src/**/!(_|temp)*.html",
+		"to": "src/blocks",
+		"js": "src/js/blocks.js",
+		"omit": "@@,js-,active,col,row"
+	}
+}
