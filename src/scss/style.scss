@@ -39,7 +39,16 @@ $breakpoints: (
 	// "../../node_modules/animate-scss/_zooming-entrances/zooming-entrances.scss";
 
 
-// @include font-face("Roboto-Black", "RBBL");
+	@include font-face("Montserrat-Thin", "MT");
+	@include font-face("Montserrat-ExtraLight", "MEL");
+	@include font-face("Montserrat-Light", "ML");
+	@include font-face("Montserrat-Regular", "MR");
+	@include font-face("Montserrat-Medium", "MM");
+	@include font-face("Montserrat-SemiBold", "MSB");
+	@include font-face("Montserrat-Bold", "MB");
+	@include font-face("Montserrat-ExtraBold", "MEB");
+	@include font-face("Montserrat-Black", "MBL");
+	
 // @import "../../node_modules/swiper/swiper";
 
 // Import BEM blocks scss

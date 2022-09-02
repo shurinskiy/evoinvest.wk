@@ -1,0 +1,97 @@
+.header {
+	$self: &;
+	background: url('#{$images-path}header-bg.png') top center / cover no-repeat transparent;
+
+	&__inner {
+		padding-top: 17px;
+	}
+
+	&__top {
+		display: flex;
+		justify-content: space-between;
+		margin-bottom: 60px;
+	}
+	
+	&__logo {
+		margin-right: 20px;
+	}
+
+	&__navi {
+		// @include outline();
+		width: 100%;
+		max-width: 908px;
+	}
+
+	&__bottom {
+		display: flex;
+	}
+
+	&__side {
+		padding-top: 15px;
+		width: 100%;
+		max-width: 600px;
+	}
+
+	&__title {
+		font-family: "MSB", sans-serif;
+		font-size: 46px;
+		color: #fff;
+		margin-bottom: 24px;
+	}
+	
+	&__text {
+		font-family: "MSB", sans-serif;
+		font-size: 22px;
+		line-height: 1.4;
+		color: #fff;
+		margin-bottom: 40px;
+	}
+	
+	&__points {
+		font-family: "ML", sans-serif;
+		font-size: 18px;
+		color: #fff;
+		margin-bottom: 40px;
+
+		span:not(:last-child) {
+			margin-right: 37px;
+
+			&::after {
+				display: inline-block;
+				content: '';
+				width: 4px;
+				height: 4px;
+				background-color: #fff;
+				border-radius: 50%;
+				vertical-align: middle;
+				margin-left: 24px;
+			}
+		}
+	}
+
+	&__buttons {
+		display: flex;
+
+		*:first-child {
+			margin-right: 24px;
+		}
+	}
+
+	&__button {
+
+	}
+
+	&__whale {
+		opacity: 0.8;
+		transition: opacity 1.0s ease, transform 1.0s ease;
+
+		img {
+			max-width: 490px;
+		}
+
+		&:hover {
+			opacity: 1;
+			transform: scale(1.04);
+		}
+	}
+}

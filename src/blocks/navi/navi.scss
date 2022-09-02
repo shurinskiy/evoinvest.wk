@@ -1,0 +1,68 @@
+.navi {
+	$self: &;
+	display: flex;
+	align-items: center;
+
+	&__menu {
+		display: flex;
+	}
+
+	&__menu-link {
+		text-decoration: none;
+		font-family: "ML", sans-serif;
+		color: #fff;
+		margin: 0 13px;
+	}
+	
+	&__login {
+		text-decoration: none;
+		font-family: "ML", sans-serif;
+		color: #fff;
+		margin: 0 24px 0 auto;
+		display: flex;
+		align-items: center;
+
+		&::before {
+			display: block;
+			content: '';
+			width: 24px;
+			height: 24px;
+			background: url('#{$images-path}icons-sprite.svg#icon-person-view-white') center / auto no-repeat transparent;
+			margin-right: 10px;
+		}
+	}
+	
+	&__lang {
+		font-family: "ML", sans-serif;
+		color: #fff;
+		display: flex;
+		align-items: center;
+		cursor: pointer;
+
+		&::after {
+			display: block;
+			content: '';
+			width: 14px;
+			height: 8px;
+			background: url('#{$images-path}icons-sprite.svg#icon-arr-down-view-white') center / auto no-repeat transparent;
+			margin-left: 10px;
+			transition: transform 0.3s ease;
+		}
+
+		&:hover {
+			&::after {
+				transform: rotate(180deg);
+			}
+		}
+	}
+	
+	&__lang-links {
+		font-family: "ML", sans-serif;
+		text-decoration: none;
+		display: none;
+	}
+
+	&__lang-link {
+
+	}
+}
