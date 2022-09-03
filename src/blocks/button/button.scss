@@ -20,5 +20,14 @@
 	
 	&_join {
 		background-color: #105862;
+		
+		&::before {
+			display: block;
+			content: '';
+			height: 24px;
+			width: 24px;
+			background: url('#{$images-path}icons-sprite.svg#icon-tgm-view-white') center / auto no-repeat transparent;
+			margin-right: 16px;
+		}
 	}
 }

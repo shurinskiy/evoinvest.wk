@@ -1,28 +1,81 @@
 .suppose {
 	$self: &;
+	overflow: hidden;
+	margin-bottom: 150px;
 
 	&__inner {
+		padding: 90px 0 32px;
+		box-sizing: border-box;
+		position: relative;
+	}
 
+	&__flyer {
+		position: absolute;
+
+		&_1 {
+			width: 196px;
+			height: 272px;
+			background: url('#{$images-path}svg-sprite.svg#shape-1-view') center / auto no-repeat transparent;
+			top: 150px;
+			left: 18px;
+		}
+		
+		&_2 {
+			width: 209px;
+			height: 226px;
+			background: url('#{$images-path}svg-sprite.svg#shape-2-view') center / auto no-repeat transparent;
+			top: 150px;
+			right: 18px;
+		}
+
+		&_3 {
+			width: 217px;
+			height: 250px;
+			background: url('#{$images-path}svg-sprite.svg#shape-3-view') center / auto no-repeat transparent;
+			bottom: 0;
+			left: 18px;
+		}
+
+		&_4 {
+			width: 254px;
+			height: 199px;
+			background: url('#{$images-path}svg-sprite.svg#shape-4-view') center / auto no-repeat transparent;
+			bottom: 0;
+			right: 18px;
+		}
 	}
 
 	&__title {
-
+		position: relative;
+		z-index: 1;
+		margin-bottom: 88px;
 	}
 
 	&__items {
-
+		position: relative;
+		z-index: 1;
+		display: flex;
+		flex-flow: row wrap;
+		padding: 0 67px;
+		margin: 0 -24px;
 	}
 
 	&__item {
-
+		box-sizing: border-box;
+		margin: 0 24px 48px;
+		width: calc(100% / 2 - 48px);
+		padding: 48px 56px 56px;
+		box-shadow: 0px 0px 17px rgba(23, 137, 153, 0.14);
+		background: rgba(208, 240, 244, 0.1);
+		backdrop-filter: blur(60px);
+		border-radius: 24px;
 	}
 
 	&__subtitle {
-
+		margin-bottom: 20px;
 	}
 
 	&__text {
-
+		line-height: 1.6;
 	}
-
 }

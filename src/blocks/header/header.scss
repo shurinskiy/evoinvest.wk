@@ -24,6 +24,7 @@
 
 	&__bottom {
 		display: flex;
+		padding-bottom: 22px;
 	}
 
 	&__side {
@@ -52,21 +53,16 @@
 		font-size: 18px;
 		color: #fff;
 		margin-bottom: 40px;
+	}
+	
+	&__points-text {
 
-		span:not(:last-child) {
-			margin-right: 37px;
-
-			&::after {
-				display: inline-block;
-				content: '';
-				width: 4px;
-				height: 4px;
-				background-color: #fff;
-				border-radius: 50%;
-				vertical-align: middle;
-				margin-left: 24px;
-			}
-		}
+	}
+	
+	&__points-bull {
+		font-size: 28px;
+		line-height: 0.4;
+		margin: 0 26px;
 	}
 
 	&__buttons {

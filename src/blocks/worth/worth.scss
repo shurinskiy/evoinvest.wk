@@ -1,28 +1,73 @@
 .worth {
 	$self: &;
+	background: url('#{$images-path}worth-bg.png') top center / cover no-repeat transparent;
+	padding: 92px 0 152px;
 
 	&__inner {
+		position: relative;
+	}
 
+	&__flyer {
+		position: absolute;
+
+		&_1 {
+			width: 122px;
+			height: 179px;
+			background: url('#{$images-path}svg-sprite.svg#shape-5-view') center / auto no-repeat transparent;
+			top: 60px;
+			left: 18px;
+		}
+		
+		&_2 {
+			width: 203px;
+			height: 227px;
+			background: url('#{$images-path}svg-sprite.svg#shape-6-view') center / auto no-repeat transparent;
+			bottom: 0;
+			left: 50%;
+			transform: translateX(-50%);
+		}
+		
+		&_3 {
+			width: 174px;
+			height: 194px;
+			background: url('#{$images-path}svg-sprite.svg#shape-7-view') center / auto no-repeat transparent;
+			top: 50%;
+			transform: translateY(-50%);
+			right: 0;
+		}
 	}
 
 	&__title {
-
+		margin-bottom: 85px;
 	}
 
 	&__items {
-
+		display: flex;
+		padding: 0 48px 35px;
+		margin: 0 -24px;
 	}
 
 	&__item {
-
+		box-sizing: border-box;
+		background: rgba(19, 222, 251, 0.1);
+		box-shadow: 0px 0px 17px rgba(10, 36, 43, 0.4);
+		backdrop-filter: blur(30px);
+		border-radius: 24px;
+		color: #fff;
+		margin: 0 24px 48px;
+		padding: 40px 48px 20px;
+		width: calc(100% / 2 - 48px);
 	}
 
 	&__subtitle {
-
+		margin-bottom: 28px;
 	}
 
 	&__text {
+		line-height: 1.57;
 
+		p {
+			margin-bottom: 28px;
+		}
 	}
-
 }

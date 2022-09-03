@@ -1,8 +1,11 @@
 .title {
 	$self: &;
-
+	font-family: "MB", sans-serif;
+	font-size: 46px;
+	text-align: center;
+	color: #000;
+	
 	&_white {
-		
+		color: #fff;
 	}
-
 }

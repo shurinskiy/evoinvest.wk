@@ -1,20 +1,31 @@
 .portfolio {
 	$self: &;
+	padding: 90px 0 100px;
 
 	&__inner {
 
 	}
 
 	&__title {
-
+		margin-bottom: 63px;
 	}
 
 	&__items {
-
+		display: flex;
+		flex-flow: row wrap;
+		margin: 0 -24px;
 	}
-
+	
 	&__item {
-
+		box-sizing: border-box;
+		background: #FFFFFF;
+		box-shadow: 0px 11px 30px rgba(30, 111, 157, 0.3);
+		border-radius: 24px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		padding: 59px 20px;
+		margin: 0 24px 48px;
+		width: calc(100% / 4 - 48px);
 	}
-
 }

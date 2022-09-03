@@ -1,0 +1,19 @@
+.marquee {
+	$self: &;
+	border-top: 2px solid #0B4B54;
+	background-color: #08313C;
+	color: #fff;
+	padding: 19px 0;
+	
+	&__block {
+		font-family: "MB", sans-serif;
+		font-size: 22px;
+		letter-spacing: 0.09em;
+		text-align: center;
+		text-transform: uppercase;
+
+		&:last-child {
+			display: none;
+		}
+	}
+}
