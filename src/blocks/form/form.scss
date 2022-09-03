@@ -2,15 +2,47 @@
 	$self: &;
 
 	&__title {
-
+		text-align: center;
+		color: #fff;
+		margin-bottom: 22px;
 	}
 
 	&__field {
+		border: 1px solid #137280;
+		border-radius: 8px;
+		margin-bottom: 22px;
+		position: relative;
+		
+		input, textarea {
+			@extend %reset-input;
+			min-height: 54px;
+			width: 100%;
+			color: #fff;
+			padding: 5px 15px;
+		}
+		
+		textarea {
+			min-height: 127px;
+			resize: none;
+		}
+		
+		legend {
+			font-size: 14px;
+			color: #fff;
+			background-color: #083545;
+			margin-left: 15px;
+			padding: 0 10px;
 
+			span {
+				background-color: transparent;
+				display: inline-block;
+				color: #f00;
+				margin-left: 4px;
+			}
+		}
 	}
 
 	&__submit {
-
+		margin: 32px auto 0;
 	}
-
 }
