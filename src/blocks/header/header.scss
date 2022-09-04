@@ -25,6 +25,10 @@
 	&__logo {
 		margin-right: 20px;
 		min-width: 135px;
+		
+		@include media('<=md') {
+			margin-right: 10px;
+		}
 	}
 
 	&__navi {
@@ -44,6 +48,10 @@
 
 		@include media('<=lg') {
 			display: block;
+		}
+		
+		@include media('<=md') {
+			margin-left: 10px;
 		}
 	}
 
