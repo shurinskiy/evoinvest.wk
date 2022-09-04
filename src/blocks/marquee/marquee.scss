@@ -4,6 +4,7 @@
 	background-color: #08313C;
 	color: #fff;
 	padding: 19px 0;
+	overflow: hidden;
 	
 	&__block {
 		font-family: "MB", sans-serif;
@@ -11,6 +12,7 @@
 		letter-spacing: 0.09em;
 		text-align: center;
 		text-transform: uppercase;
+		white-space: nowrap;
 
 		&:last-child {
 			display: none;

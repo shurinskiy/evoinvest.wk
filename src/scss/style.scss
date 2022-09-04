@@ -1,5 +1,5 @@
 @import "lib/additional.scss"; 
-@include reset(); 
+@include reset();
 
 // Include breakpoints badge
 body { @include screen-media(); }

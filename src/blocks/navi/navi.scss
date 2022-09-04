@@ -3,6 +3,10 @@
 	display: flex;
 	align-items: center;
 
+	a { 
+		transition: color 0.4s ease; 
+	}
+
 	&__menu {
 		display: flex;
 	}
@@ -35,9 +39,11 @@
 	&__lang {
 		font-family: "ML", sans-serif;
 		color: #fff;
+		height: 100%;
 		display: flex;
 		align-items: center;
 		cursor: pointer;
+		position: relative;
 
 		&::after {
 			display: block;
@@ -53,16 +59,47 @@
 			&::after {
 				transform: rotate(180deg);
 			}
+
+			#{$self}__lang-links {
+				display: block;
+			}
 		}
 	}
 	
 	&__lang-links {
+		box-sizing: border-box;
 		font-family: "ML", sans-serif;
 		text-decoration: none;
 		display: none;
+		background-color: #fff;
+		border-radius: 16px;
+		padding: 20px 32px;
+		position: absolute;
+		top: calc(100% - 10px);
+		right: 0;
+		z-index: 1;
+		
+		@keyframes submenu_fade {
+			0% {opacity: 0;}
+			100% {opacity: 1;}
+		}
+		animation: submenu_fade 0.5s ease;
 	}
 
 	&__lang-link {
+		display: block;
+		font-family: "MR", sans-serif;
+		text-decoration: none;
+		color: #000;
+		font-size: 18px;
+		padding: 13px 0;
 
+		&:hover {
+			color: #1585A6;
+		}
+	}
+
+	&__toggle {
+		
 	}
 }

@@ -1,0 +1,27 @@
+.above {
+	$self: &;
+	@extend %reset-button;
+	display: block;
+	position: fixed;
+	width: 40px;
+	height: 40px;
+	border: 2px solid black;
+	border-radius: 50%;
+	bottom: 40px;
+	right: 40px;
+	background-color: rgba(255, 255, 255, 0.15);
+	backdrop-filter: blur(10px);
+	
+	&::before {
+		position: relative;
+		display: block;
+		content: '';
+		width: 18px;
+		height: 10px;
+		background: url('#{$images-path}icons-sprite.svg#icon-arr-down-view-black') center / auto no-repeat transparent;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%) rotate(180deg);
+		z-index: 2;
+	}
+}

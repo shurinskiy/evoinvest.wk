@@ -9,17 +9,22 @@
 	&__top {
 		display: flex;
 		justify-content: space-between;
+		height: 60px;
 		margin-bottom: 60px;
 	}
 	
 	&__logo {
 		margin-right: 20px;
+		min-width: 135px;
 	}
 
 	&__navi {
-		// @include outline();
 		width: 100%;
 		max-width: 908px;
+	}
+
+	&__navi-toggle {
+		display: none;
 	}
 
 	&__bottom {
