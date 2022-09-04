@@ -12,15 +12,19 @@
 		background-size: auto;
 
 		&_tgm {
-			background-image: url('#{$images-path}icons-sprite.svg#icon-tgm2-view-white');
+			background-image: url('#{$images-path}icons-sprite.svg#icon-soc-tgm-view-white');
 		}
 		
 		&_twt {
-			background-image: url('#{$images-path}icons-sprite.svg#icon-twt-view-white');
+			background-image: url('#{$images-path}icons-sprite.svg#icon-soc-twt-view-white');
 		}
 		
 		&_mail {
-			background-image: url('#{$images-path}icons-sprite.svg#icon-mail-view-white');
+			background-image: url('#{$images-path}icons-sprite.svg#icon-soc-mail-view-white');
+		}
+		
+		&_git {
+			background-image: url('#{$images-path}icons-sprite.svg#icon-soc-git-view-white');
 		}
 	}
 }

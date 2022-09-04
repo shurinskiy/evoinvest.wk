@@ -9,6 +9,6 @@
 	width: 100%;
 	
 	@include media('<=lg') {
-
+		max-width: 940px;
 	}
 }

@@ -23,6 +23,7 @@
 		
 		&::before {
 			display: block;
+			flex-shrink: 0;
 			content: '';
 			height: 24px;
 			width: 24px;

@@ -1,9 +1,14 @@
 .header {
 	$self: &;
 	background: url('#{$images-path}header-bg.png') top center / cover no-repeat transparent;
+	overflow: hidden;
 
 	&__inner {
 		padding-top: 17px;
+		
+		@include media('<=lg') {
+			padding-top: 22px;
+		}
 	}
 
 	&__top {
@@ -11,6 +16,10 @@
 		justify-content: space-between;
 		height: 60px;
 		margin-bottom: 60px;
+		
+		@include media('<=lg') {
+			margin-bottom: 70px;
+		}
 	}
 	
 	&__logo {
@@ -21,15 +30,30 @@
 	&__navi {
 		width: 100%;
 		max-width: 908px;
+
+		@include media('<=lg') {
+			width: auto;
+			max-width: none;
+			margin: 0 auto;
+		}
 	}
 
 	&__navi-toggle {
 		display: none;
+		margin-left: 20px;
+
+		@include media('<=lg') {
+			display: block;
+		}
 	}
 
 	&__bottom {
 		display: flex;
 		padding-bottom: 22px;
+		
+		@include media('<=lg') {
+			padding-bottom: 58px;
+		}
 	}
 
 	&__side {
@@ -57,7 +81,11 @@
 		font-family: "ML", sans-serif;
 		font-size: 18px;
 		color: #fff;
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
 		margin-bottom: 40px;
+		max-width: 447px;
 	}
 	
 	&__points-text {
@@ -67,7 +95,7 @@
 	&__points-bull {
 		font-size: 28px;
 		line-height: 0.4;
-		margin: 0 26px;
+		margin: 0 10px;
 	}
 
 	&__buttons {
@@ -88,11 +116,19 @@
 
 		img {
 			max-width: 490px;
+			
+			@include media('<=lg') {
+				max-width: 440px;
+			}
 		}
 
 		&:hover {
 			opacity: 1;
 			transform: scale(1.04);
+		}
+			
+		@include media('<=lg') {
+			margin-right: -60px;
 		}
 	}
 }

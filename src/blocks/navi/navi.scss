@@ -16,6 +16,7 @@
 		font-family: "ML", sans-serif;
 		color: #fff;
 		margin: 0 13px;
+		white-space: nowrap;
 	}
 	
 	&__login {
@@ -33,6 +34,10 @@
 			height: 24px;
 			background: url('#{$images-path}icons-sprite.svg#icon-person-view-white') center / auto no-repeat transparent;
 			margin-right: 10px;
+		}
+
+		@include media('<=lg') {
+			display: none;
 		}
 	}
 	
@@ -63,6 +68,10 @@
 			#{$self}__lang-links {
 				display: block;
 			}
+		}
+
+		@include media('<=lg') {
+			display: none;
 		}
 	}
 	
@@ -100,6 +109,11 @@
 	}
 
 	&__toggle {
-		
+		@extend %reset-button;
+		flex-shrink: 0;
+		min-height: 24px;
+		width: 24px;
+		background: url('#{$images-path}icons-sprite.svg#icon-menu-view-white') center / 20px 18px no-repeat transparent;
+		// align-self: center;
 	}
 }

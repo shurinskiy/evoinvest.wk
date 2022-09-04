@@ -1,6 +1,8 @@
 @import "lib/additional.scss"; 
 @include reset();
 
+// * div { @include outline(); }
+
 // Include breakpoints badge
 body { @include screen-media(); }
 

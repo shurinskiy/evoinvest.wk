@@ -2,4 +2,8 @@
 	$self: &;
 	font-family: "MM", sans-serif;
 	font-size: 28px;
+	
+	@include media('<=lg') {
+		font-size: 22px;
+	}
 }

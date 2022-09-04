@@ -2,12 +2,20 @@
 	$self: &;
 	overflow: hidden;
 	margin-bottom: 150px;
+	
+	@include media('<=lg') {
+		margin-bottom: 115px;
+	}
 
 	&__inner {
 		padding-top: 90px;
 		padding-bottom: 32px;
 		box-sizing: border-box;
 		position: relative;
+		
+		@include media('<=lg') {
+			padding-top: 85px;
+		}
 	}
 
 	&__flyer {
@@ -19,6 +27,11 @@
 			background: url('#{$images-path}svg-sprite.svg#shape-1-view') center / auto no-repeat transparent;
 			top: 150px;
 			left: 24px;
+			
+			@include media('<=lg') {
+				top: 145px;
+				left: 0;
+			}
 		}
 		
 		&_2 {
@@ -27,6 +40,11 @@
 			background: url('#{$images-path}svg-sprite.svg#shape-2-view') center / auto no-repeat transparent;
 			top: 150px;
 			right: 24px;
+			
+			@include media('<=lg') {
+				top: 165px;
+				right: 0;
+			}
 		}
 
 		&_3 {
@@ -35,6 +53,10 @@
 			background: url('#{$images-path}svg-sprite.svg#shape-3-view') center / auto no-repeat transparent;
 			bottom: 0;
 			left: 24px;
+			
+			@include media('<=lg') {
+				left: 0;
+			}
 		}
 
 		&_4 {
@@ -43,11 +65,19 @@
 			background: url('#{$images-path}svg-sprite.svg#shape-4-view') center / auto no-repeat transparent;
 			bottom: 0;
 			right: 24px;
+			
+			@include media('<=lg') {
+				right: 0;
+			}
 		}
 	}
 
 	&__title {
 		margin-bottom: 88px;
+		
+		@include media('<=lg') {
+			margin-bottom: 85px;
+		}
 	}
 
 	&__items {
@@ -55,6 +85,10 @@
 		flex-flow: row wrap;
 		padding: 0 48px;
 		margin: 0 -24px;
+		
+		@include media('<=lg') {
+			padding: 0;
+		}
 	}
 
 	&__item {
@@ -66,10 +100,16 @@
 		background: rgba(208, 240, 244, 0.1);
 		backdrop-filter: blur(60px);
 		border-radius: 24px;
+		
+		@include media('<=lg') {
+			min-height: 285px;
+		}
 	}
 
 	&__subtitle {
 		margin-bottom: 20px;
+		font-family: "MM", sans-serif;
+		font-size: 28px;
 	}
 
 	&__text {
