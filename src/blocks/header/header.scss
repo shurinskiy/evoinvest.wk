@@ -1,18 +1,23 @@
 .header {
 	$self: &;
-	background: url('#{$images-path}header-bg.png') top center / cover no-repeat transparent;
+	background: url('#{$images-path}header-bg.png') top center / cover no-repeat, linear-gradient(to right, rgba(4,41,54,1), rgba(9,60,79,1));
 	overflow: hidden;
-	
+	padding-top: 17px;
+		
+	@include media('<=lg') {
+		padding-top: 22px;
+	}
+
 	@include media('<=sm') {
-		background: linear-gradient(to right, rgba(0, 0, 0, .5), rgba(0, 0, 0, .5)), url('#{$images-path}header-whale.png') center / 400px no-repeat, url('#{$images-path}header-bg.png') top left 65% / cover no-repeat transparent;
+		background: linear-gradient(to right, rgba(0, 0, 0, .5), rgba(0, 0, 0, .5)), url('#{$images-path}header-whale.png') center top 125px / 470px no-repeat, url('#{$images-path}header-bg.png') top left 65% / cover no-repeat, linear-gradient(to right, rgba(4,41,54,1), rgba(9,60,79,1));
+	}
+
+	@include media('<=xxs') {
+		background: linear-gradient(to right, rgba(0, 0, 0, .5), rgba(0, 0, 0, .5)), url('#{$images-path}header-whale.png') left top 140px / 420px no-repeat, url('#{$images-path}header-bg.png') top left 70% / cover no-repeat, linear-gradient(to right, rgba(4,41,54,1), rgba(9,60,79,1));
 	}
 
 	&__inner {
-		padding-top: 17px;
-		
-		@include media('<=lg') {
-			padding-top: 22px;
-		}
+
 	}
 
 	&__top {
@@ -25,6 +30,10 @@
 		@include media('<=lg') {
 			margin-bottom: 70px;
 		}
+		
+		@include media('<=xxs') {
+			margin-bottom: 110px;
+		}
 	}
 	
 	&__logo {
@@ -34,6 +43,10 @@
 		
 		@include media('<=md') {
 			margin-right: 10px;
+		}
+		
+		@include media('<=xxxs') {
+			max-width: 132px;
 		}
 	}
 
@@ -67,6 +80,14 @@
 		@include media('<=lg') {
 			padding-bottom: 58px;
 		}
+		
+		@include media('<=sm') {
+			padding-bottom: 130px;
+		}
+		
+		@include media('<=xxs') {
+			padding-bottom: 135px;
+		}
 	}
 
 	&__side {
@@ -89,6 +110,11 @@
 		font-size: 46px;
 		color: #fff;
 		margin-bottom: 24px;
+
+		@include media('<=xxs') {
+			text-align: center;
+			font-size: 36px;
+		}
 	}
 	
 	&__text {
@@ -97,6 +123,13 @@
 		line-height: 1.4;
 		color: #fff;
 		margin-bottom: 40px;
+		
+		@include media('<=xxs') {
+			font-family: "MM", sans-serif;
+			text-align: center;
+			margin-bottom: 16px;
+			font-size: 20px;
+		}
 	}
 	
 	&__points {
@@ -108,6 +141,14 @@
 		justify-content: space-between;
 		margin-bottom: 40px;
 		max-width: 447px;
+		
+		@include media('<=xxs') {
+			flex-wrap: wrap;
+			justify-content: center;
+			margin-bottom: 28px;
+			line-height: 1.8;
+			font-size: 16px;
+		}
 	}
 	
 	&__points-text {
@@ -142,7 +183,11 @@
 	}
 
 	&__button {
-
+		&.button {
+			@include media('<=xxxs') {
+				max-width: none;
+			}
+		}
 	}
 
 	&__whale {

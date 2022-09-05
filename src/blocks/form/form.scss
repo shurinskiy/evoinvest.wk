@@ -7,6 +7,11 @@
 		margin-bottom: 22px;
 		font-family: "MM", sans-serif;
 		font-size: 28px;
+		
+		@include media('<=xxxs') {
+			margin-bottom: 57px;
+			font-size: 20px;
+		}
 	}
 
 	&__field {
@@ -14,13 +19,17 @@
 		border-radius: 8px;
 		margin-bottom: 22px;
 		position: relative;
-		
+	
 		input, textarea {
 			@extend %reset-input;
 			min-height: 54px;
 			width: 100%;
 			color: #fff;
 			padding: 5px 15px;
+			
+			@include media('<=xs') {
+				min-height: 53px;
+			}
 		}
 		
 		textarea {
@@ -34,7 +43,12 @@
 			background-color: #083545;
 			margin-left: 15px;
 			padding: 0 10px;
-
+			
+			@include media('<=xs') {
+				margin-left: 23px;
+				font-size: 16px;
+			}
+			
 			span {
 				background-color: transparent;
 				display: inline-block;

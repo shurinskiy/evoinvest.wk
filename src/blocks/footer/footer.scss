@@ -2,6 +2,10 @@
 	$self: &;
 	background: url('#{$images-path}footer-bg.png') top center / cover no-repeat transparent;
 	padding-top: 90px;
+	
+	@include media('<=xxxs') {
+		padding-top: 52px;
+	}
 
 	&__inner {
 
@@ -9,26 +13,65 @@
 
 	&__title {
 		margin-bottom: 45px;
+		
+		br {
+			display: none;
+		}
+		
+		@include media('<=xxxs') {
+			margin-bottom: 31px;
+			line-height: 1.35;
+
+			br {
+				display: block;
+			}
+		}
 	}
 
 	&__buttons {
 		display: flex;
 		justify-content: center;
 		margin-bottom: 43px;
+		
+		@include media('<=xs') {
+			display: block;
+		}
+		
+		@include media('<=xxxs') {
+			margin-bottom: 50px;
+		}
 	}
-
+	
 	&__button {
 		margin: 0 12px;
+		
+		@include media('<=xs') {
+			margin: 0 auto 16px;
+		}
+
+		&.button {
+			@include media('<=xxxs') {
+				max-width: none;
+			}
+		}
 	}
 
 	&__form {
 		margin: 0 auto 80px;
 		max-width: 447px;
+		
+		@include media('<=xxxs') {
+			margin: 0 auto 47px;
+		}
 	}
 
 	&__socials {
 		max-width: 240px;
 		margin: 0 auto 40px;
+		
+		@include media('<=xxxs') {
+			margin: 0 auto 32px;
+		}
 	}
 
 	&__bottom {
@@ -36,15 +79,33 @@
 		align-items: center;
 		max-width: 510px;
 		margin: 0 auto 40px;
+		
+		@include media('<=xxs') {
+			flex-wrap: wrap;
+			justify-content: center;
+		}
 	}
 
 	&__logo {
 		max-width: 112px;
 		margin-right: 32px;
+		
+		@include media('<=xxs') {
+			margin: 0 0 30px;
+		}
 	}
 
 	&__rights {
 		color: #fff;
 		font-size: 20px;
+		
+		@include media('<=xxs') {
+			text-align: center;
+			font-size: 18px;
+		}
+		
+		@include media('<=xxxs') {
+			font-size: 16px;
+		}
 	}
 }

@@ -10,7 +10,7 @@ body { @include screen-media(); }
 @import "../../node_modules/include-media/dist/_include-media.scss";
 
 $breakpoints: (
-	'xxxs': 360px,
+	'xxxs': 377px,
 	'xxs': 480px,
 	'xs': 640px,
 	'sm': 780px,

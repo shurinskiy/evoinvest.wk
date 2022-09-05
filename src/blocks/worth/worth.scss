@@ -6,12 +6,30 @@
 	@include media('<=lg') {
 		padding: 92px 0 112px;
 	}
+	
+	@include media('<=xxs') {
+		padding: 53px 0 48px;
+	}
 
 	&__inner {
 		position: relative;
+		background: url('#{$images-path}svg-sprite.svg#shape-5-view') top 60px left 24px / 122px 179px no-repeat, url('#{$images-path}svg-sprite.svg#shape-6-view') bottom 0 left 50% / 203px 227px no-repeat, url('#{$images-path}svg-sprite.svg#shape-7-view') top 54% right 24px / 174px 194px no-repeat;
+		
+		@include media('<=lg') {
+			background: url('#{$images-path}svg-sprite.svg#shape-5-view') top 60px left 0 / 122px 179px no-repeat, url('#{$images-path}svg-sprite.svg#shape-6-view') bottom 0 left 50% / 203px 227px no-repeat, url('#{$images-path}svg-sprite.svg#shape-7-view') top 54% right 0 / 174px 194px no-repeat;
+
+		}
+		
+		@include media('<=xs') {
+			background: url('#{$images-path}svg-sprite.svg#shape-5-view') top 110px right 0 / 122px 179px no-repeat, url('#{$images-path}svg-sprite.svg#shape-6-view') top 50% left -20px / 203px 227px no-repeat, url('#{$images-path}svg-sprite.svg#shape-7-view') bottom 0 right 0 / 174px 194px no-repeat;
+		}
+		
+		@include media('<=xxs') {
+			background: url('#{$images-path}svg-sprite.svg#shape-5-view') top 60px right 7px / 122px 179px no-repeat, url('#{$images-path}svg-sprite.svg#shape-6-view') top 61% left -6px / 171px 191px no-repeat, url('#{$images-path}svg-sprite.svg#shape-7-view') bottom 0 right 0 / 207px 231px no-repeat;
+		}
 	}
 
-	&__flyer {
+	/* &__flyer {
 		position: absolute;
 
 		&_1 {
@@ -48,10 +66,14 @@
 				right: 0px;
 			}
 		}
-	}
+	} */
 
 	&__title {
 		margin-bottom: 85px;
+		
+		@include media('<=xxs') {
+			margin-bottom: 98px;
+		}
 	}
 
 	&__items {
@@ -72,6 +94,16 @@
 		@include media('<=sm') {
 			flex-wrap: wrap;
 			justify-content: center;
+		}
+		
+		@include media('<=xs') {
+			display: block;
+			margin: 0 auto;
+			max-width: 450px;
+		}
+		
+		@include media('<=xxs') {
+			padding: 0 0 66px;
 		}
 	}
 
@@ -101,6 +133,17 @@
 			width: calc(100% / 2 - 28px);
 			min-height: 410px;
 		}
+		
+		@include media('<=xs') {
+			min-height: 330px;
+			margin: 0 0 40px;
+			width: 100%;
+		}
+		
+		@include media('<=xxs') {
+			padding: 40px 60px 20px 50px;
+			margin: 0 0 32px;
+		}
 	}
 
 	&__subtitle {
@@ -111,6 +154,10 @@
 		@include media('<=lg') {
 			font-size: 22px;
 		}
+		
+		@include media('<=xxs') {
+			font-size: 20px;
+		}
 	}
 
 	&__text {
@@ -118,6 +165,10 @@
 		
 		@include media('<=md') {
 			font-size: 15px;
+		}
+		
+		@include media('<=xxs') {
+			line-height: 1.7;
 		}
 
 		p {

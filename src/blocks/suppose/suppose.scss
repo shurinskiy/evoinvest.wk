@@ -6,19 +6,35 @@
 	@include media('<=lg') {
 		margin-bottom: 115px;
 	}
+	
+	@include media('<=xxs') {
+		margin-bottom: 49px;
+	}
 
 	&__inner {
 		padding-top: 90px;
 		padding-bottom: 32px;
 		box-sizing: border-box;
 		position: relative;
+		background: url('#{$images-path}svg-sprite.svg#shape-1-view') top 150px left 24px / 196px 272px no-repeat, url('#{$images-path}svg-sprite.svg#shape-2-view') top 150px right 24px / 209px 226px no-repeat, url('#{$images-path}svg-sprite.svg#shape-3-view') bottom 0 left 24px / 217px 250px no-repeat, url('#{$images-path}svg-sprite.svg#shape-4-view') bottom 0 right 24px / 254px 199px no-repeat;
 		
 		@include media('<=lg') {
 			padding-top: 85px;
+			background: url('#{$images-path}svg-sprite.svg#shape-1-view') top 145px left 0 / 196px 272px no-repeat, url('#{$images-path}svg-sprite.svg#shape-2-view') top 165px right 0 / 209px 226px no-repeat, url('#{$images-path}svg-sprite.svg#shape-3-view') bottom 0 left 0 / 217px 250px no-repeat, url('#{$images-path}svg-sprite.svg#shape-4-view') bottom 0 right 0 / 254px 199px no-repeat;
+		}
+		
+		@include media('<=xs') {
+			background: url('#{$images-path}svg-sprite.svg#shape-1-view') top 138px right 24px / 138px 192px no-repeat, url('#{$images-path}svg-sprite.svg#shape-2-view') top 30% left -24px / 146px 158px no-repeat, url('#{$images-path}svg-sprite.svg#shape-3-view') bottom 21% right 10px / 144px 167px no-repeat, url('#{$images-path}svg-sprite.svg#shape-4-view') bottom 0 left 0 / 254px 199px no-repeat;
+		}
+		
+		@include media('<=xxs') {
+			padding-top: 48px;
+			padding-bottom: 72px;
+			background: url('#{$images-path}svg-sprite.svg#shape-1-view') top 108px right 30px / 138px 192px no-repeat, url('#{$images-path}svg-sprite.svg#shape-2-view') top 28% left -24px / 146px 158px no-repeat, url('#{$images-path}svg-sprite.svg#shape-3-view') bottom 24% right 10px / 144px 167px no-repeat, url('#{$images-path}svg-sprite.svg#shape-4-view') bottom 0 left 0 / 254px 199px no-repeat;
 		}
 	}
 
-	&__flyer {
+	/* &__flyer {
 		position: absolute;
 
 		&_1 {
@@ -70,13 +86,17 @@
 				right: 0;
 			}
 		}
-	}
+	} */
 
 	&__title {
 		margin-bottom: 88px;
 		
 		@include media('<=lg') {
 			margin-bottom: 85px;
+		}
+		
+		@include media('<=xxs') {
+			margin-bottom: 98px;
 		}
 	}
 
@@ -92,6 +112,12 @@
 		
 		@include media('<=md') {
 			margin: 0 -16px;
+		}
+		
+		@include media('<=xs') {
+			display: block;
+			margin: 0 auto;
+			max-width: 450px;
 		}
 	}
 
@@ -117,6 +143,17 @@
 		@include media('<=sm') {
 			padding: 40px;
 		}
+		
+		@include media('<=xs') {
+			margin: 0 0 40px;
+			width: 100%;
+		}
+		
+		@include media('<=xxs') {
+			padding: 39px 48px;
+			margin: 0 0 32px;
+			min-height: 318px;
+		}
 	}
 
 	&__subtitle {
@@ -126,6 +163,12 @@
 		
 		@include media('<=sm') {
 			font-size: 24px;
+		}
+		
+		@include media('<=xxs') {
+			margin-bottom: 26px;
+			font-size: 20px;
+			line-height: 1.3;
 		}
 	}
 

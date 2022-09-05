@@ -5,6 +5,10 @@
 	@include media('<=lg') {
 		padding: 85px 0 63px;
 	}
+	
+	@include media('<=xxs') {
+		padding: 55px 0 24px;
+	}
 
 	&__inner {
 
@@ -16,6 +20,10 @@
 		@include media('<=lg') {
 			margin-bottom: 52px;
 		}
+		
+		@include media('<=xxs') {
+			margin-bottom: 35px;
+		}
 	}
 
 	&__items {
@@ -25,6 +33,10 @@
 		
 		@include media('<=md') {
 			margin: 0 -16px;
+		}
+		
+		@include media('<=xxs') {
+			margin: 0 -12px;
 		}
 	}
 	
@@ -51,12 +63,28 @@
 		}
 		
 		@include media('<=md') {
-			margin: 0 16px 36px;
+			margin: 0 16px 32px;
 			width: calc(100% / 4 - 32px);
 		}
 		
 		@include media('<=sm') {
 			width: calc(100% / 3 - 32px);
+		}
+		
+		@include media('<=xs') {
+			width: calc(100% / 2 - 32px);
+			min-height: 140px;
+		}
+		
+		@include media('<=xxs') {
+			padding: 20px;
+			min-height: 120px;
+			margin: 0 12px 24px;
+			width: calc(100% / 2 - 24px);
+		}
+		
+		@include media('<=xxxs') {
+			min-height: 92px;
 		}
 		
 		&[style*="display: block"] {
@@ -76,6 +104,11 @@
 		color: #196FBE;
 		cursor: pointer;
 		
+		@include media('<=xxs') {
+			padding-top: 5px;
+			font-size: 16px;
+		}
+	
 		&::after {
 			display: block;
 			content: '';
