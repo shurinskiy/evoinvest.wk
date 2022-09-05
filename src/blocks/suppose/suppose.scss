@@ -89,6 +89,10 @@
 		@include media('<=lg') {
 			padding: 0;
 		}
+		
+		@include media('<=md') {
+			margin: 0 -16px;
+		}
 	}
 
 	&__item {
@@ -103,6 +107,11 @@
 		
 		@include media('<=lg') {
 			min-height: 285px;
+		}
+		
+		@include media('<=md') {
+			margin: 0 16px 32px;
+			width: calc(100% / 2 - 32px);
 		}
 	}
 

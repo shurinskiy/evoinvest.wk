@@ -3,25 +3,43 @@
 	display: flex;
 	align-items: center;
 	position: relative;
-
-	a { 
-		transition: color 0.4s ease; 
+			
+	@keyframes navi_fade {
+		0% {opacity: 0;}
+		100% {opacity: 1;}
 	}
 
+	@include media('<=sm') {
+		display: none;
+		background-color: #fff;
+		flex-flow: column nowrap;
+		align-items: stretch;
+		padding: 18px 32px;
+		border-radius: 16px;
+		position: absolute;
+		z-index: 2;
+		top: calc(100% - 8px);
+		right: 0;
+	}
+
+	a { transition: color 0.4s ease; }
 	
 	&.opened {
 		
 		@include media('<=lg') {
+
 			#{$self}__side {
+				animation: navi_fade 0.5s ease;
 				display: block;
 			}
-			
-			#{$self}__lang span {
-				display: none;
-			}
+		}
+		
+		@include media('<=sm') {
+			animation: navi_fade 0.5s ease;
+			display: flex;
 
-			#{$self}__lang-links {
-
+			#{$self}__side {
+				animation: none;
 			}
 		}
 	}
@@ -29,6 +47,10 @@
 	
 	&__menu {
 		display: flex;
+		
+		@include media('<=sm') {
+			display: block;
+		}
 	}
 
 	&__side {
@@ -46,6 +68,19 @@
 			top: 100%;
 			right: -45px;
 			z-index: 1;
+			margin: 0;
+		}
+		
+		@include media('<=sm') {
+			background: transparent;
+			border-radius: 0;
+			position: static;
+			display: block;
+			padding: 0;
+			order: -1;
+			border-bottom: 1px solid #ececec;
+			margin: 0 0 20px;
+			padding-bottom: 20px;
 		}
 	}
 
@@ -55,9 +90,23 @@
 		color: #fff;
 		margin: 0 13px;
 		white-space: nowrap;
-
+		
 		@include media('<=md') {
+			margin: 0 8px;
 			font-size: 15px;
+		}
+		
+		@include media('<=sm') {
+			display: block;
+			font-family: "MR", sans-serif;
+			font-size: 18px;
+			color: #000;
+			margin: 0;
+			padding: 11px 0;
+
+			&:hover {
+				color: #1585A6;
+			}
 		}
 	}
 	
@@ -98,6 +147,10 @@
 				&::before { filter: grayscale(0%); }
 			}
 		}
+			
+		@include media('<=sm') {
+			padding: 11px 0;
+		}
 	}
 	
 	&__lang {
@@ -131,6 +184,12 @@
 				}
 			}
 		}
+
+		@include media('<=lg') {
+			span {
+				display: none;
+			}
+		}
 	}
 	
 	&__lang-links {
@@ -147,12 +206,7 @@
 			top: calc(100% - 10px);
 			right: 0;
 			z-index: 1;
-			
-			@keyframes submenu_fade {
-				0% {opacity: 0;}
-				100% {opacity: 1;}
-			}
-			animation: submenu_fade 0.5s ease;
+			animation: navi_fade 0.5s ease;
 		}
 	}
 
@@ -163,9 +217,13 @@
 		color: #000;
 		font-size: 18px;
 		padding: 13px 0;
-
+		
 		&:hover {
 			color: #1585A6;
+		}
+		
+		@include media('<=sm') {
+			padding: 11px 0;
 		}
 	}
 

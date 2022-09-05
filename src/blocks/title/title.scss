@@ -5,6 +5,10 @@
 	text-align: center;
 	color: #000;
 	
+	@include media('<=md') {
+		font-size: 40px;
+	}
+	
 	&_white {
 		color: #fff;
 	}

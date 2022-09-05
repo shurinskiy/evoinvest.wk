@@ -22,6 +22,10 @@
 		display: flex;
 		flex-flow: row wrap;
 		margin: 0 -24px;
+		
+		@include media('<=md') {
+			margin: 0 -16px;
+		}
 	}
 	
 	&__item {
@@ -39,6 +43,11 @@
 		@include media('<=lg') {
 			padding: 43px 20px;
 			border-radius: 16px;
+		}
+		
+		@include media('<=md') {
+			margin: 0 16px 36px;
+			width: calc(100% / 4 - 32px);
 		}
 	}
 }

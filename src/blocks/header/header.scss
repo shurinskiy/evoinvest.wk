@@ -14,8 +14,9 @@
 	&__top {
 		display: flex;
 		justify-content: space-between;
-		height: 60px;
+		position: relative;
 		margin-bottom: 60px;
+		height: 60px;
 		
 		@include media('<=lg') {
 			margin-bottom: 70px;
@@ -24,7 +25,9 @@
 	
 	&__logo {
 		margin-right: 20px;
-		min-width: 135px;
+		display: flex;
+		align-items: center;
+		// min-width: 135px;
 		
 		@include media('<=md') {
 			margin-right: 10px;
@@ -57,7 +60,6 @@
 
 	&__bottom {
 		display: flex;
-		padding-bottom: 22px;
 		
 		@include media('<=lg') {
 			padding-bottom: 58px;
@@ -67,7 +69,12 @@
 	&__side {
 		padding-top: 15px;
 		width: 100%;
-		max-width: 600px;
+		max-width: 510px;
+		
+		@include media('<=md') {
+			max-width: 430px;
+			
+		}
 	}
 
 	&__title {
@@ -111,6 +118,10 @@
 
 		*:first-child {
 			margin-right: 24px;
+			
+			@include media('<=md') {
+				margin-right: 14px;
+			}
 		}
 	}
 
@@ -121,9 +132,11 @@
 	&__whale {
 		opacity: 0.8;
 		transition: opacity 1.0s ease, transform 1.0s ease;
+		margin-left: auto;
 
 		img {
-			max-width: 490px;
+			width: 100%;
+			max-width: 513px;
 			
 			@include media('<=lg') {
 				max-width: 440px;
