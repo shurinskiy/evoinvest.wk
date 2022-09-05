@@ -65,7 +65,13 @@
 		}
 		
 		@include media('<=md') {
+			padding: 0 0 56px;
 			margin: 0 -14px;
+		}
+		
+		@include media('<=sm') {
+			flex-wrap: wrap;
+			justify-content: center;
 		}
 	}
 
@@ -87,8 +93,13 @@
 		
 		@include media('<=md') {
 			padding: 40px 30px 20px;
-			margin: 0 14px;
+			margin: 0 14px 28px;
 			width: calc(100% / 3 - 28px);
+		}
+		
+		@include media('<=sm') {
+			width: calc(100% / 2 - 28px);
+			min-height: 410px;
 		}
 	}
 

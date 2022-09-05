@@ -113,12 +113,20 @@
 			margin: 0 16px 32px;
 			width: calc(100% / 2 - 32px);
 		}
+		
+		@include media('<=sm') {
+			padding: 40px;
+		}
 	}
 
 	&__subtitle {
 		margin-bottom: 20px;
 		font-family: "MM", sans-serif;
 		font-size: 28px;
+		
+		@include media('<=sm') {
+			font-size: 24px;
+		}
 	}
 
 	&__text {

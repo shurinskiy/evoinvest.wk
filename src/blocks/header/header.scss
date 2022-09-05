@@ -2,6 +2,10 @@
 	$self: &;
 	background: url('#{$images-path}header-bg.png') top center / cover no-repeat transparent;
 	overflow: hidden;
+	
+	@include media('<=sm') {
+		background: linear-gradient(to right, rgba(0, 0, 0, .5), rgba(0, 0, 0, .5)), url('#{$images-path}header-whale.png') center / 400px no-repeat, url('#{$images-path}header-bg.png') top left 65% / cover no-repeat transparent;
+	}
 
 	&__inner {
 		padding-top: 17px;
@@ -27,7 +31,6 @@
 		margin-right: 20px;
 		display: flex;
 		align-items: center;
-		// min-width: 135px;
 		
 		@include media('<=md') {
 			margin-right: 10px;
@@ -73,7 +76,11 @@
 		
 		@include media('<=md') {
 			max-width: 430px;
-			
+		}
+		
+		@include media('<=sm') {
+			max-width: 495px;
+			margin: 0 auto;
 		}
 	}
 
@@ -116,11 +123,20 @@
 	&__buttons {
 		display: flex;
 
+		@include media('<=xxs') {
+			flex-flow: column nowrap;
+			align-items: center;
+		}
+
 		*:first-child {
-			margin-right: 24px;
+			margin: 0 24px 0 0;
 			
 			@include media('<=md') {
-				margin-right: 14px;
+				margin: 0 14px 0 0;
+			}
+			
+			@include media('<=xxs') {
+				margin: 0 0 20px 0;
 			}
 		}
 	}
@@ -150,6 +166,10 @@
 			
 		@include media('<=lg') {
 			margin-right: -60px;
+		}
+			
+		@include media('<=sm') {
+			display: none;
 		}
 	}
 }

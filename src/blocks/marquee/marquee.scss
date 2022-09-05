@@ -13,9 +13,13 @@
 		text-align: center;
 		text-transform: uppercase;
 		white-space: nowrap;
-
+		
 		&:last-child {
 			display: none;
+		}
+		
+		@include media('<=xs') {
+			font-size: 20px;
 		}
 	}
 }

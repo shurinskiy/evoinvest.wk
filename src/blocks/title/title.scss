@@ -9,6 +9,10 @@
 		font-size: 40px;
 	}
 	
+	@include media('<=sm') {
+		font-size: 38px;
+	}
+	
 	&_white {
 		color: #fff;
 	}
