@@ -137,7 +137,7 @@
 		@include media('>xs') {
 			opacity: 0;
 			transition: transform 1.2s 2s ease-out, opacity 1.2s 2s ease-out;
-			transform: translate(0, 100%);
+			transform: translate(0, 50%);
 			
 			&.active {
 				opacity: 1;
