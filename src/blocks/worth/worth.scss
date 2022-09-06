@@ -134,6 +134,22 @@
 			min-height: 410px;
 		}
 		
+		@include media('>xs') {
+			opacity: 0;
+			transition: transform 1.2s 2s ease-out, opacity 1.2s 2s ease-out;
+			transform: translate(0, 100%);
+			
+			&.active {
+				opacity: 1;
+				transform: translate(0, 0);
+				transition: transform 0.5s;
+	
+				&:hover {
+					transform: translateY(-20px);
+				}
+			}
+		}
+		
 		@include media('<=xs') {
 			min-height: 330px;
 			margin: 0 0 40px;
