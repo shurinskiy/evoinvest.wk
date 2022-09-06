@@ -198,6 +198,7 @@
 		img {
 			width: 100%;
 			max-width: 513px;
+			filter: grayscale(40%);
 			
 			@include media('<=lg') {
 				max-width: 440px;

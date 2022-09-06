@@ -1,5 +1,8 @@
-(() => {
+import { scrollClassToggle } from "../../js/lib";
 
+(() => {
+	scrollClassToggle(document.querySelectorAll('.portfolio__item'))
+	
 	let $items = $('.portfolio__items').find('.portfolio__item');
 
 	if($items.length > 8)

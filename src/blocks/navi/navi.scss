@@ -122,7 +122,7 @@
 			width: 24px;
 			height: 24px;
 			background: url('#{$images-path}icons-sprite.svg#icon-person-view-white') center / auto no-repeat transparent;
-			margin-right: 10px;
+			margin: 0 10px 6px 0;
 		}
 
 		@include media('>lg') {

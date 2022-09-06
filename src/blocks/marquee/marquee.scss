@@ -3,19 +3,48 @@
 	border-top: 2px solid #0B4B54;
 	background-color: #08313C;
 	color: #fff;
-	padding: 19px 0;
+	min-height: 64px;
+	position: relative;
 	overflow: hidden;
+	display: flex;
 	
-	&__block {
+	@keyframes marquee {
+		from {  transform: translateX(100%); }
+		to { transform: translateX(-100%); }
+	}
+	
+	&__item {
 		font-family: "MB", sans-serif;
 		font-size: 22px;
 		letter-spacing: 0.09em;
-		text-align: center;
 		text-transform: uppercase;
+		text-align: center;
 		white-space: nowrap;
+		flex-shrink: 0;
+		animation: marquee 40s linear infinite;
+		position: absolute;
+		top: 30%;
+		width: 150%;
 		
-		&:last-child {
-			display: none;
+		@include media('<=xlg') {
+			animation-duration: 30s;
+			width: 180%;
+		}
+		
+		@include media('<=sm') {
+			width: 1300px;
+		}
+		
+		&:nth-child(1) {
+			animation-delay: -20s;
+			
+			@include media('<=xlg') {
+				animation-delay: -15s;
+			}
+		}
+		
+		&:nth-child(2) {
+			transform: translateX(100%);
 		}
 		
 		@include media('<=xs') {

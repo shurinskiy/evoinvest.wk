@@ -144,6 +144,22 @@
 			padding: 40px;
 		}
 		
+		@include media('>xs') {
+			opacity: 0;
+			transition: transform 1.2s ease-out, opacity 1.2s ease-out;
+			transform: translate(0, 100%);
+			
+			&.active {
+				opacity: 1;
+				transform: translate(0, 0);
+				transition: transform 0.5s;
+	
+				&:hover {
+					transform: translateY(-20px);
+				}
+			}
+		}
+		
 		@include media('<=xs') {
 			margin: 0 0 40px;
 			width: 100%;
@@ -173,6 +189,7 @@
 	}
 
 	&__text {
+		font-family: "MR", sans-serif;
 		line-height: 1.6;
 	}
 }
