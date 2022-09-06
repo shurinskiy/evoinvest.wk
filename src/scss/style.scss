@@ -1,10 +1,8 @@
 @import "lib/additional.scss"; 
 @include reset();
 
-// * div { @include outline(); }
-
 // Include breakpoints badge
-body { @include screen-media(); }
+// body { @include screen-media(); }
 
 // Import media-query helper
 @import "../../node_modules/include-media/dist/_include-media.scss";

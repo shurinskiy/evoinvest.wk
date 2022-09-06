@@ -193,12 +193,12 @@
 	&__whale {
 		opacity: 0.8;
 		transition: opacity 1.0s ease, transform 1.0s ease;
+		filter: grayscale(40%);
 		margin-left: auto;
 
 		img {
 			width: 100%;
 			max-width: 513px;
-			filter: grayscale(40%);
 			
 			@include media('<=lg') {
 				max-width: 440px;

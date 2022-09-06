@@ -22,7 +22,7 @@
 		right: 0;
 	}
 
-	a { transition: color 0.4s ease; }
+	a { transition: color 0.3s ease, text-shadow 0.3s ease; }
 	
 	&.opened {
 		
@@ -96,6 +96,12 @@
 			font-size: 15px;
 		}
 		
+		@include media('>sm') {
+			&:hover {
+				text-shadow: 1px 1px 12px #fff, -1px -1px 12px #fff;
+			}
+		}
+		
 		@include media('<=sm') {
 			display: block;
 			font-family: "MR", sans-serif;
@@ -121,6 +127,7 @@
 			content: '';
 			width: 24px;
 			height: 24px;
+			transition: filter 0.3s;
 			background: url('#{$images-path}icons-sprite.svg#icon-person-view-white') center / auto no-repeat transparent;
 			margin: 0 10px 6px 0;
 		}
@@ -128,6 +135,11 @@
 		@include media('>lg') {
 			color: #fff;
 			margin-right: 24px;
+			
+			&:hover {
+				text-shadow: 1px 1px 12px #fff, -1px -1px 12px #fff;
+				&::before { filter: drop-shadow(0 0 10px #fff); }
+			}
 		}
 		
 		@include media('<=lg') {

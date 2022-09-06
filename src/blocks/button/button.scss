@@ -11,10 +11,16 @@
 	max-width: 240px;
 	border-radius: 8px;
 	background-color: #0E313A;
+	transition: text-shadow 0.3s ease;
 	min-height: 56px;
 	padding: 8px;
 	font-size: 16px;
-	
+
+	&:hover {
+		text-shadow: 1px 1px 10px #fff, -1px -1px 10px #fff;
+		&::before { filter: drop-shadow(0 0 8px #fff); }
+	}
+
 	&_suggest {
 		background-color: #148595;
 	}
@@ -30,6 +36,7 @@
 			width: 24px;
 			background: url('#{$images-path}icons-sprite.svg#icon-tgm-view-white') center / auto no-repeat transparent;
 			margin-right: 16px;
+			transition: filter 0.3s;
 		}
 	}
 }
