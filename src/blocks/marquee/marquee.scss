@@ -26,13 +26,13 @@
 		text-align: center;
 		white-space: nowrap;
 		flex-shrink: 0;
-		animation: marquee 50s linear infinite;
+		animation: marquee 60s linear infinite;
 		position: absolute;
 		top: 30%;
 		width: 140%;
 		
 		@include media('<=xlg') {
-			animation-duration: 40s;
+			animation-duration: 50s;
 			width: 170%;
 		}
 		
@@ -41,10 +41,10 @@
 		}
 		
 		&:nth-child(1) {
-			animation-delay: -25s;
+			animation-delay: -30s;
 			
 			@include media('<=xlg') {
-				animation-delay: -20s;
+				animation-delay: -25s;
 			}
 		}
 		
