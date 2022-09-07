@@ -118,7 +118,7 @@
 		padding: 40px 48px 20px;
 		width: calc(100% / 3 - 48px);
 		opacity: 0;
-		transition: transform 4.0s ease-out, opacity 4.0s ease-out;
+		transition: transform 2.0s ease-out, opacity 2.0s ease-out;
 		transform: translate(0, 50%);
 	
 		@include media('<=lg') {
@@ -151,7 +151,6 @@
 		&.active {
 			opacity: 1;
 			transform: translate(0, 0);
-			transition: transform 0.5s;
 
 			&:hover {
 				transform: translateY(-20px);
