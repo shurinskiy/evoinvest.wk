@@ -76,6 +76,7 @@
 
 	&__bottom {
 		display: flex;
+		padding-bottom: 25px;
 		
 		@include media('<=lg') {
 			padding-bottom: 58px;
@@ -191,14 +192,20 @@
 	}
 
 	&__whale {
-		opacity: 0.8;
-		transition: opacity 1.0s ease, transform 1.0s ease;
-		filter: grayscale(40%);
-		margin-left: auto;
+		transition: transform 1.0s ease, filter 1.0s ease;
+		margin: 0 15px 0 auto;
+			
+		@include media('<=lg') {
+			margin: 0 -60px 0 0;
+		}
+			
+		@include media('<=sm') {
+			display: none;
+		}
 
 		img {
 			width: 100%;
-			max-width: 513px;
+			max-width: 509px;
 			
 			@include media('<=lg') {
 				max-width: 440px;
@@ -206,16 +213,8 @@
 		}
 
 		&:hover {
-			opacity: 1;
 			transform: scale(1.04);
-		}
-			
-		@include media('<=lg') {
-			margin-right: -60px;
-		}
-			
-		@include media('<=sm') {
-			display: none;
+			filter: brightness(1.15) saturate(0.9);
 		}
 	}
 }

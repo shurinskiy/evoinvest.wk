@@ -98,7 +98,7 @@
 		
 		@include media('>sm') {
 			&:hover {
-				text-shadow: 1px 1px 12px #fff, -1px -1px 12px #fff;
+				text-shadow: 1px 1px 12px rgba(255, 255, 255, 0.5), -1px -1px 12px rgba(255, 255, 255, 0.5);
 			}
 		}
 		
@@ -137,7 +137,7 @@
 			margin-right: 24px;
 			
 			&:hover {
-				text-shadow: 1px 1px 12px #fff, -1px -1px 12px #fff;
+				text-shadow: 1px 1px 12px rgba(255, 255, 255, 0.5), -1px -1px 12px rgba(255, 255, 255, 0.5);
 				&::before { filter: drop-shadow(0 0 10px #fff); }
 			}
 		}

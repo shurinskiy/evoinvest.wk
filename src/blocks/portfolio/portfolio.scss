@@ -52,10 +52,9 @@
 		margin: 0 24px 48px;
 		width: calc(100% / 4 - 48px);
 		display: none;
-		
-		&:nth-child(-n + 8) {
-			display: flex;
-		}
+		opacity: 0;
+		transition: transform 1.2s 2s ease-out, opacity 1.2s 2s ease-out;
+		transform: translate(0, 100%);
 
 		@include media('<=lg') {
 			padding: 43px 20px;
@@ -69,22 +68,6 @@
 		
 		@include media('<=sm') {
 			width: calc(100% / 3 - 32px);
-		}
-		
-		@include media('>xs') {
-			opacity: 0;
-			transition: transform 1.2s 2s ease-out, opacity 1.2s 2s ease-out;
-			transform: translate(0, 100%);
-			
-			&.active {
-				opacity: 1;
-				transform: translate(0, 0);
-				transition: transform 0.5s;
-	
-				&:hover {
-					transform: translateY(-20px);
-				}
-			}
 		}
 		
 		@include media('<=xs') {
@@ -101,6 +84,20 @@
 		
 		@include media('<=xxxs') {
 			min-height: 92px;
+		}
+		
+		&.active {
+			opacity: 1;
+			transform: translate(0, 0);
+			transition: transform 0.5s;
+
+			&:hover {
+				transform: translateY(-20px);
+			}
+		}
+	
+		&:nth-child(-n + 8) {
+			display: flex;
 		}
 		
 		&[style*="display: block"] {

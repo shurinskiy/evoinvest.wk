@@ -130,7 +130,10 @@
 		background: rgba(208, 240, 244, 0.1);
 		backdrop-filter: blur(60px);
 		border-radius: 24px;
-		
+		opacity: 0;
+		transition: transform 1.2s 2s ease-out, opacity 1.2s 2s ease-out;
+		transform: translate(0, 100%);
+	
 		@include media('<=lg') {
 			min-height: 285px;
 		}
@@ -144,22 +147,6 @@
 			padding: 40px;
 		}
 		
-		@include media('>xs') {
-			opacity: 0;
-			transition: transform 1.2s 2s ease-out, opacity 1.2s 2s ease-out;
-			transform: translate(0, 100%);
-			
-			&.active {
-				opacity: 1;
-				transform: translate(0, 0);
-				transition: transform 0.5s;
-	
-				&:hover {
-					transform: translateY(-20px);
-				}
-			}
-		}
-		
 		@include media('<=xs') {
 			margin: 0 0 40px;
 			width: 100%;
@@ -169,6 +156,16 @@
 			padding: 39px 48px;
 			margin: 0 0 32px;
 			min-height: 318px;
+		}
+		
+		&.active {
+			opacity: 1;
+			transform: translate(0, 0);
+			transition: transform 0.5s;
+
+			&:hover {
+				transform: translateY(-20px);
+			}
 		}
 	}
 
