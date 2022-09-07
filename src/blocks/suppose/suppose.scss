@@ -131,7 +131,7 @@
 		backdrop-filter: blur(60px);
 		border-radius: 24px;
 		opacity: 0;
-		transition: transform 2.0s ease-out, opacity 2.0s ease-out;
+		transition: transform 1.0s ease-out, opacity 1.0s ease-out;
 		transform: translate(0, 100%);
 	
 		@include media('<=lg') {
