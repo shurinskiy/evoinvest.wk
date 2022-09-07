@@ -89,9 +89,11 @@
 		&.active {
 			opacity: 1;
 			transform: translate(0, 0);
-
+		
 			&:hover {
-				transform: translateY(-20px);
+				@include media('>xxs') {
+					transform: translateY(-20px);
+				}
 			}
 		}
 	

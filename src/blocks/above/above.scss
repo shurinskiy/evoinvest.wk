@@ -7,15 +7,22 @@
 	height: 40px;
 	border: 2px solid black;
 	border-radius: 50%;
-	bottom: 40px;
-	right: 40px;
-	background-color: rgba(255, 255, 255, 0.15);
-	backdrop-filter: blur(10px);
+	bottom: 17px;
+	right: 17px;
+	// background-color: rgba(255, 255, 255, 0.15);
+	// backdrop-filter: blur(10px);
 	transition: transform 0.3s;
-
+	
+	@include media('<=xxs') {
+		width: 30px;
+		height: 30px;
+		border: 1px solid black;
+		bottom: 10px;
+		right: 10px;
+	}
+	
 	@include media('<=xxxs') {
-		bottom: 24px;
-		right: 24px;
+
 	}
 	
 	&:hover {
@@ -33,5 +40,10 @@
 		left: 50%;
 		transform: translate(-50%, -50%) rotate(180deg);
 		z-index: 2;
+		
+		@include media('<=xxs') {
+			width: 13px;
+			height: 7px;
+		}
 	}
 }
