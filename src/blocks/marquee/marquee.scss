@@ -8,6 +8,11 @@
 	overflow: hidden;
 	display: flex;
 	
+	@include media('<=xxs') {
+		min-height: 58px;
+		margin-bottom: 6px;
+	}
+	
 	@keyframes marquee {
 		from {  transform: translateX(100%); }
 		to { transform: translateX(-100%); }
