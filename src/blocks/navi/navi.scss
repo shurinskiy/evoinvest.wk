@@ -125,11 +125,11 @@
 		&::before {
 			display: block;
 			content: '';
-			width: 24px;
-			height: 24px;
+			width: 20px;
+			height: 20px;
 			transition: filter 0.3s;
-			background: url('#{$images-path}icons-sprite.svg#icon-person-view-white') center / auto no-repeat transparent;
-			margin: 0 10px 6px 0;
+			background: url('#{$images-path}icons-sprite.svg#icon-user-view-white') center / auto no-repeat transparent;
+			margin: 0 10px 4px 0;
 		}
 
 		@include media('>lg') {

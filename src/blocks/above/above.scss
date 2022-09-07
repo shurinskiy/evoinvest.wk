@@ -17,7 +17,7 @@
 		width: 30px;
 		height: 30px;
 		border: 1px solid black;
-		bottom: 10px;
+		bottom: 30px;
 		right: 10px;
 	}
 	
@@ -26,7 +26,7 @@
 	}
 	
 	&:hover {
-		transform: translateY(-8px);
+		// transform: translateY(-8px);
 	}
 
 	&::before {

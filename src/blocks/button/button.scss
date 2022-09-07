@@ -20,16 +20,26 @@
 	&:hover {
 		// text-shadow: 1px 1px 10px #fff, -1px -1px 10px #fff;
 		// &::before { filter: drop-shadow(0 0 8px #fff); }
-		box-shadow: 0 0 15px rgba(255, 255, 255, 0.25);
+		box-shadow: 0 0 15px rgba(255, 255, 255, 0.15);
 	}
-
+	
 	&_suggest {
 		background-color: #148595;
 	}
 	
+	&_submit {
+		&:hover {
+			box-shadow: 0 0 15px rgba(255, 255, 255, 0.05);
+		}
+	}
+	
 	&_join {
 		background-color: #105862;
-			
+
+		&:hover {
+			box-shadow: 0 0 15px rgba(255, 255, 255, 0.1);
+		}
+				
 		&::before {
 			display: block;
 			flex-shrink: 0;
