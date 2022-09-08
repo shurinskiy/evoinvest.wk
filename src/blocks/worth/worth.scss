@@ -118,7 +118,7 @@
 		padding: 40px 48px 20px;
 		width: calc(100% / 3 - 48px);
 		opacity: 0;
-		transition: transform 0.8s ease-out, opacity 0.8s ease-out;
+		transition: transform 0.8s ease, opacity 0.8s ease;
 		transform: translate(0, 50%);
 	
 		@include media('<=lg') {

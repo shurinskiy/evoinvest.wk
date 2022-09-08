@@ -6,12 +6,13 @@
 	&__item {
 		width: 24px;
 		height: 24px;
+		transition: filter 0.3s ease, opacity 0.3s ease;
 		background-color: transparent;
 		background-repeat: no-repeat;
 		background-position: center;
 		background-size: auto;
 		opacity: 0.9;
-
+		
 		&_tgm {
 			background-image: url('#{$images-path}icons-sprite.svg#icon-soc-tgm-view-white');
 		}
@@ -26,6 +27,11 @@
 		
 		&_git {
 			background-image: url('#{$images-path}icons-sprite.svg#icon-soc-git-view-white');
+		}
+		
+		&:hover {
+			filter: drop-shadow(0 0 8px rgba(255, 255, 255, 0.3));
+			opacity: 1.0;
 		}
 	}
 }

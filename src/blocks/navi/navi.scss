@@ -149,7 +149,7 @@
 			color: #000;
 			
 			&::before {
-				background-image: url('#{$images-path}icons-sprite.svg#icon-person-view-marine');
+				background-image: url('#{$images-path}icons-sprite.svg#icon-user-view-marine');
 				filter: grayscale(100%);
 				transition: filter 0.4s ease;
 			}
