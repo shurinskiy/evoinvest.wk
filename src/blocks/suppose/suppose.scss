@@ -132,7 +132,7 @@
 		border-radius: 24px;
 		opacity: 0;
 		transition: transform 0.8s ease, opacity 0.8s ease;
-		transform: translate(0, 80%);
+		transform: translate(0, 100%);
 	
 		@include media('<=lg') {
 			min-height: 285px;
